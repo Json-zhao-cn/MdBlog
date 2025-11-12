@@ -10,3 +10,6 @@ categories:
 
 
 ### Why are officials born into poor families more prone to corruption?
+
+
+PoorfamiliyOfficial_Corruption

@@ -9,3 +9,6 @@ categories:
 
 
 ### Why is it so difficult for white-collar workers from poor families?
+
+
+PoorfamiliyWhite-collar_Difficult

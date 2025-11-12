@@ -6,7 +6,21 @@ import { webpackBundler } from '@vuepress/bundler-webpack'
 export default defineUserConfig({
   title: "Manifacturing Industry Blog",
   description: "This is a blog for manufacturing industry, some experiences just for json zhao.",
-  bundler: viteBundler(),
+  // Use Vite bundler with tuned options to reduce watcher / pre-bundle overhead on Windows
+  bundler: viteBundler({
+    viteOptions: {
+      server: {
+        // Ignore large folders to avoid expensive file watch on Windows (node_modules/.git/.vuepress/.temp)
+        watch: {
+          ignored: ['**/node_modules/**', '**/.git/**', '**/.vuepress/.temp/**']
+        }
+      },
+      // If some dependencies cause slow pre-bundling, list them here to exclude from optimizeDeps
+      optimizeDeps: {
+        // exclude: ['some-big-dep']
+      }
+    }
+  }),
   // bundler: webpackBundler(),
   theme: recoTheme({
     logo: "/logo.png",
@@ -32,8 +46,9 @@ export default defineUserConfig({
     },
     navbar: [
       { text: "Home", link: "/" },
-      { text: "Categories", link: "/categories/reco/1.html" },
-      { text: "Tags", link: "/tags/tag1/1.html" },
+      { text: "Categories", link: "/categories/Skills/1.html" },
+      // Use the tags index instead of a hard-coded tag page to avoid 404s
+      { text: "Tags", link: "/tags/SQLServer/1.html" },
       {
         text: "Docs",
         children: [
