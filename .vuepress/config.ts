@@ -4,6 +4,9 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
+  // Base URL for deploying to GitHub Pages. If you publish to
+  // https://<user>.github.io/<repo>/ you must set base to '/<repo>/'
+  base: '/Vueblog/',
   title: "Manifacturing Industry Blog",
   description: "This is a blog for manufacturing industry, some experiences just for json zhao.",
   // Use Vite bundler with tuned options to reduce watcher / pre-bundle overhead on Windows
