@@ -7,6 +7,9 @@ categories:
  - Skills
 ---
 
+### Use stored procedure to judge the cdc table data has new row 
+We will use cdc to sync source db table to target db. We will sync it based on the transactionId, not all data.If one transaction log is very large. We need to sync it serval times. Then, we need to judg does this transaction log exist new row or not. Finally, we will use usp_GetCdcQueryStartMode stored proceduce to do it.
+
 ```sql
 USE [YourDatabase]
 GO

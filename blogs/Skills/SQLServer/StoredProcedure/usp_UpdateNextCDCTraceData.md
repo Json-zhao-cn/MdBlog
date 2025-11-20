@@ -7,6 +7,12 @@ categories:
  - Skills
 ---
 
+### Use stored procedure to update CDC_Sync_Control table data **Only two dbs**
+
+####  Update CDC_Sync_Control table  current `__$start_lsn` and `__$seqval`
+1. After finished sync current `__$start_lsn` data from source db table to target DB. We need to record the sync `__$start_lsn` and `__$seqval`
+So, we will use a stored procedure to do it.The stored procedure is :
+
 ```sql
 USE [YourDatabase]
 GO
@@ -95,12 +101,19 @@ BEGIN
     ------------------------------------------------------------
     -- DYNAMIC SQL TO GET MAX LSN/SEQ
     ------------------------------------------------------------
-    SET @sql = N'
-    SELECT 
-        @OutMaxLSN_OUT = MAX(c.__$start_lsn),
-        @OutMaxSeq_OUT = MAX(c.__$seqval)
-    FROM ' + @CdcTableName + N' c
-    WHERE ' + @Where + N';';
+     ------------------------------------------------------------
+    -- DYNAMIC SQL TO GET MAX LSN/SEQ
+    ------------------------------------------------------------
+   SET @sql = N'
+		SELECT TOP(1) 
+			@OutMaxLSN_OUT = t.__$start_lsn,
+			@OutMaxSeq_OUT = t.__$seqval 
+		FROM (
+			SELECT TOP(@PageSize) *
+			FROM ' + @CdcTableName + N' c
+			WHERE ' + @Where + N'
+		) t 
+		ORDER BY t.__$start_lsn DESC, t.__$seqval DESC;';
 
     ------------------------------------------------------------
     -- EXECUTE DYNAMIC SQL
@@ -109,10 +122,11 @@ BEGIN
     BEGIN
         EXEC sp_executesql
             @sql,
-            N'@LastSyncLSN binary(10), @LastSeqVal varbinary(10),
+            N'@LastSyncLSN binary(10), @LastSeqVal varbinary(10),@PageSize int,
               @OutMaxLSN_OUT binary(10) OUTPUT, @OutMaxSeq_OUT varbinary(10) OUTPUT',
             @LastSyncLSN = @LastSyncLSN,
             @LastSeqVal = @LastSeqVal,
+			@PageSize =@PageSize,
             @OutMaxLSN_OUT = @OutMaxLSN OUTPUT,
             @OutMaxSeq_OUT = @OutMaxSeq OUTPUT;
     END
@@ -120,9 +134,10 @@ BEGIN
     BEGIN
         EXEC sp_executesql
             @sql,
-            N'@NextLSN binary(10),
+            N'@NextLSN binary(10),@PageSize int,
               @OutMaxLSN_OUT binary(10) OUTPUT, @OutMaxSeq_OUT varbinary(10) OUTPUT',
             @NextLSN = @NextLSN,
+			@PageSize =@PageSize,
             @OutMaxLSN_OUT = @OutMaxLSN OUTPUT,
             @OutMaxSeq_OUT = @OutMaxSeq OUTPUT;
     END
