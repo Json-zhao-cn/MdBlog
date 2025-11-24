@@ -12,12 +12,36 @@ categories:
 # Using `AG Trigger` to `Sync Job status` in the `SQL Server Alwayson` cluster
 
 # Process
-```mermaid
-graph TD
-    A[Failover_Job_Status Table] --> B[Usp_syncJobStatus Stored procedure]
-    B --> C[ sync_JobStatus Job]
-    C --> D[Duplicate job from master to all slavers]
-    D --> E[AG failover trigger]
+```Text
+    +------------------------------------+
+    |       Failover_Job_Status Table    |
+    +------------------------------------+
+                    |
+                    ▼
+    +------------------------------------+
+    | Usp_syncJobStatus Stored procedure |
+    +------------------------------------+
+                    |
+                    ▼
+    +------------------------------------+
+    |       sync_JobStatus Job           |
+    +------------------------------------+
+                    |
+                    ▼
+    +------------------------------------+
+    |      Duplicate all jobs AG Node    |
+    +------------------------------------+
+                    |
+                    ▼
+    +------------------------------------+
+    |      AG failover trigger           |
+    +------------------------------------+
+                    |
+                    ▼
+    +------------------------------------+
+    |               Test                 |
+    +------------------------------------+
+
 ```
 
 ## 1. **Create Customer Failover_Job_Status**
