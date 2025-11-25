@@ -7,7 +7,7 @@ categories:
  - Skills
 ---
 
-### Create Index in the SQL Server
+### **Create Index in the SQL Server**
 ```sql
 -- Single-column index
 CREATE INDEX IX_Products_CategoryID ON Products (CategoryID);
