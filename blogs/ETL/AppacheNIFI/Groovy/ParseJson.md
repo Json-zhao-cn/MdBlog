@@ -1,5 +1,5 @@
 ---
-title: Parse specific Json
+title: Using groovy to parse Json array
 date: 2025/11/12
 tags:
  - ApacheNIFI
@@ -7,7 +7,8 @@ categories:
  - ETL
 ---
 
-## **Parse specific Json**
+# **Using groovy to parse Json array**
+## **Parse specific Json array**
 
 After get htttp data, we will get the specific json.Normally, when we use the native NIFI processor to parse json. It will be diffcult. So
 We will use groovy to parse it.
@@ -27,6 +28,7 @@ We will use groovy to parse it.
 ```
 
 ### 2. Groovy script
+The groovy script:
 ```Groovy
 import groovy.json.JsonSlurper
 import groovy.json.JsonOutput

@@ -8,7 +8,7 @@ categories:
 ---
 
 
-## NSSM Command
+## **NSSM Command**
 ### 1. Install Service
 `C:\nssm\nssm.exe install NiFi-2.3.0`
 ### 2. Remove Service
