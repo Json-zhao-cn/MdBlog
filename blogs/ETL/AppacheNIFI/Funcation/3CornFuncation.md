@@ -1,5 +1,5 @@
 ---
-title: How to use `Corn driven` strategy in the Apache NIFI
+title: How to use Corn driven strategy in the Apache NIFI
 date: 2025/11/27
 tags:
  - ApacheNIFI
