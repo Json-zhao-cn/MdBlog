@@ -213,7 +213,7 @@ Even with large-scale environments:
 
 ---
 
-# 🎯 **In Short — Perfect for AlwaysOn Production Environments**
+# **In Short — Perfect for AlwaysOn Production Environments**
 
 Your design pattern offers:
 

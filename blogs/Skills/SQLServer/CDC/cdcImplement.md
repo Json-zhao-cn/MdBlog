@@ -61,7 +61,7 @@ EXEC sys.sp_cdc_change_job
     @retention = 4320  -- 3 days × 24 hours × 60 minutes = 4320 minutes
 ```
 
-✅ This ensures the CDC cleanup job removes changes older than 3 days.
+This ensures the CDC cleanup job removes changes older than 3 days.
 
 ---
 
@@ -99,7 +99,7 @@ EXEC sys.sp_cdc_disable_db;
 
 ---
 
-⚡ Summary:
+Summary:
 
 * Enable CDC at **DB level** (`sp_cdc_enable_db`)
 * Enable CDC for each table (`sp_cdc_enable_table`)
