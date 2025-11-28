@@ -1,5 +1,5 @@
 ---
-title: How to use `Corn driven` strategy in the Apache NIFI
+title: How to use Corn driven strategy in the Apache NIFI
 date: 2025/11/27
 tags:
  - ApacheNIFI
@@ -7,7 +7,7 @@ categories:
  - ETL
 ---
 
-## **How to use `Corn driven` strategy in the Apache NIFI**
+## **How to use Corn driven strategy in the Apache NIFI**
 There are two `shceduling strategy` in the Apache NIFI. One is `Timer driven`, another is `Corn driven`.
 
 ![ControllerService](./schedulingstrategy.png)

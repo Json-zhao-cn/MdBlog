@@ -10,7 +10,7 @@ categories:
 **clear explanation of each SQL Server CDC table and its columns**
 ---
 
-# 📘 CDC Objects in SQL Server
+#  CDC Objects in SQL Server
 
 When you enable CDC on a database + table, SQL Server automatically creates:
 
@@ -20,7 +20,7 @@ When you enable CDC on a database + table, SQL Server automatically creates:
 
 ---
 
-# 📗 1. Change Tables (`cdc.<capture_instance>_CT`)
+#  1. Change Tables (`cdc.<capture_instance>_CT`)
 
 Created for **each table you enable CDC on**.
 
@@ -37,11 +37,11 @@ Created for **each table you enable CDC on**.
 | **\_\_\$update\_mask** | `varbinary`  | Bit mask → which columns were updated.                                |
 | **(source columns)**   | various      | Copy of your original table’s columns.                                |
 
-👉 Each DML change (INSERT/UPDATE/DELETE) is logged here.
+Each DML change (INSERT/UPDATE/DELETE) is logged here.
 
 ---
 
-# 📙 2. CDC Metadata Tables (in `cdc` schema)
+# 2. CDC Metadata Tables (in `cdc` schema)
 
 ### a) `cdc.change_tables`
 
@@ -104,7 +104,7 @@ Created for **each table you enable CDC on**.
 | `tran_id`         | varbinary  | Transaction ID.          |
 | `tran_type`       | int        | Type of transaction.     |
 
-👉 Useful to get **changes between dates**.
+Useful to get **changes between dates**.
 
 ---
 
@@ -123,7 +123,7 @@ Created for **each table you enable CDC on**.
 
 ---
 
-# 📕 3. CDC Functions (auto-created per table)
+#  3. CDC Functions (auto-created per table)
 
 * `cdc.fn_cdc_get_all_changes_<capture_instance>`
 * `cdc.fn_cdc_get_net_changes_<capture_instance>`
@@ -132,7 +132,7 @@ These return changes between LSN ranges.
 
 ---
 
-# ✅ Summary
+#  Summary
 
 When you enable CDC, SQL Server creates:
 

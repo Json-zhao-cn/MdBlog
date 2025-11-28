@@ -9,7 +9,7 @@ categories:
 ---
 
 #### offset pagination optimization in the SQL Server
-##### 🔍 Problem with `OFFSET`
+##### Problem with `OFFSET`
 
 When you use:
 
@@ -23,7 +23,7 @@ SQL Server **must scan and skip 100,000 rows**, even if you're only fetching 10.
 
 ---
 
-##### ✅ Optimization Techniques
+##### Optimization Techniques
 
 ###### 1. **Use Seek Method (Keyset Pagination)**
 
@@ -94,7 +94,7 @@ FROM CTE
 WHERE rn BETWEEN @Start AND @End;
 ```
 
-⚠️ Still suffers from performance issues on large sets but can be tuned with proper indexing.
+Still suffers from performance issues on large sets but can be tuned with proper indexing.
 
 ---
 
@@ -110,7 +110,7 @@ Also, **rebuild indexes** regularly for high-volume tables.
 
 ---
 
-##### 🧪 Performance Benchmarking
+##### Performance Benchmarking
 
 Use **`SET STATISTICS IO ON`** and **`SET STATISTICS TIME ON`** to measure improvements:
 
@@ -122,7 +122,7 @@ SET STATISTICS TIME ON;
 
 ---
 
-##### 🛠️ When OFFSET is Unavoidable
+##### When OFFSET is Unavoidable
 
 * Use `OFFSET` only with **small page numbers**.
 * Avoid using `OFFSET` without `ORDER BY`.
