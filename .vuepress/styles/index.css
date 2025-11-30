@@ -1,9 +1,8 @@
 /* /.vuepress/styles/index.css */
 
-/* This targets the span/div containing the theme credit and hides it */
-.reco-footer-copyright-item:first-child {
-  display: none !important;
-}
+/* .footer-wrapper .xicon-container.left span:last-child {
+  visibility: hidden !important;
+} */
 
 /* If the first selector hides BOTH the theme credit and your copyright, try this alternative: */
 /* .reco-footer-copyright > *:first-child {

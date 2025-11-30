@@ -62,36 +62,6 @@ export default defineUserConfig({
       //   ],
       // },
     ],
-    // bulletin: {
-    //   title:'Information',
-    //   body: [
-    //     {
-    //       type: "text",
-    //       content: `I write this blog just for share some Manifacturing Industry experiences and skills,and I hope it can help you.<br>
-    //       If you have any questions, please contact me.`,
-    //       style: "font-size: 12px;",
-    //     },
-    //     {
-    //       type: "hr",
-    //     },
-    //     {
-    //       type: "title",
-    //       content: "Contact",
-    //     },
-    //     {
-    //       type: "text",
-    //       content: `
-    //       <ul>
-    //         <li>📧Email:json.zhao.cn@outlook.com</li>
-    //         <li>📱Phone:+86 13404849141</li>
-    //       </ul>`,
-    //       style: "font-size: 12px;",
-    //     },
-    //     {
-    //       type: "hr",
-    //     },
-    //   ],
-    // },
     bulletin: {
       title: 'Information',
       body: [
