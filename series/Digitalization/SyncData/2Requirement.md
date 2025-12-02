@@ -2,7 +2,7 @@
 title: Sync Data Requirement
 date: 2025/03/05
 tags:
- - SyncData
+ - Digitalization
 categories:
  - Project
 ---

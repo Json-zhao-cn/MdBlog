@@ -2,7 +2,7 @@
 title: Sync Data Scope
 date: 2025/03/03
 tags:
- - SyncData
+ - Digitalization
 categories:
  - Project
 ---

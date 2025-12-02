@@ -1,5 +1,5 @@
 ---
-title: Apache NIFI PutDatabaseRecord processor
+title: PutDatabaseRecord
 date: 2025/11/27
 tags:
  - ApacheNIFI

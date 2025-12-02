@@ -2,7 +2,7 @@
 title: Sync Data Evalute
 date: 2025/03/15
 tags:
- - SyncData
+ - Digitalization
 categories:
  - Project
 ---

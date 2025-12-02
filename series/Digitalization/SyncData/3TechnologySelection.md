@@ -2,7 +2,7 @@
 title: Sync Data Technology Selection
 date: 2025/03/10
 tags:
- - SyncData
+ - Digitalization
 categories:
  - Project
 ---

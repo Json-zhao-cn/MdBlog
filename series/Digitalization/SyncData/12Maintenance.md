@@ -2,7 +2,7 @@
 title: Sync Data Maintenance
 date: 2025/08/10
 tags:
- - SyncData
+ - Digitalization
 categories:
  - Project
 ---

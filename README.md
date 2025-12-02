@@ -3,7 +3,7 @@ home: true
 modules:
   - Blog
   - MdContent
-  # - Footer
+  - Footer
 isShowTitleInHome: true
 # actionText: About
 #actionLink: /views/other/about

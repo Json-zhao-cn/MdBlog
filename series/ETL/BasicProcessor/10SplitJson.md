@@ -1,5 +1,5 @@
 ---
-title: Apache NIFI SplitJson processor
+title: SplitJson
 date: 2025/11/27
 tags:
  - ApacheNIFI

@@ -2,6 +2,7 @@ import { defineUserConfig } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
 import { viteBundler } from '@vuepress/bundler-vite'
 import { webpackBundler } from '@vuepress/bundler-webpack'
+import { getChildrenHtmlVue } from './Extension/FileExtension';
 
 export default defineUserConfig({
   // Base URL for deploying to GitHub Pages. If you publish to
@@ -33,18 +34,26 @@ export default defineUserConfig({
     docsDir: "example",
     lastUpdatedText: "",
     // series as sidebar
-    // series: {
-    //   // "/docs/theme-reco/": [
-    //   //   {
-    //   //     text: "module one",
-    //   //     children: ["home", "theme"],
-    //   //   },
-    //   //   {
-    //   //     text: "module two",
-    //   //     children: ["api", "plugin"],
-    //   //   },
-    //   // ],
-    // },
+    series: {
+      "/series/ETL/BasicProcessor/": [
+        {
+          text: "BasicKnowledge",
+          children: ["1Group", "2Controller-services","3InputAndOutPort","4UpdateAttribute","5LogMessage","6ExecuteSQL","7ConvertAvroToJSON","8ExecuteSQLRecord",
+            "9ConvertRecord","10SplitJson","11EvaluateJsonPath","12RouteOnAttribute","13RouteOnContent","14MergeContent","15ReplaceText","16PutSQL"
+            ,"17PutDatabaseRecord","18InvokeHTTP"
+          ]
+          //children: getChildrenHtmlVue('.temp/pages/series/ETL/BasicProcessor'),
+        },
+      ],
+      "/series/Digitalization/SyncData/": [
+        {
+          text: "SyncData",
+          children: ["1Scope", "2Requirement","3TechnologySelection","4Resource","5Evaluate","6Plan","7Analyse",
+            "8Design","9Dev","10Test","11Execute","12Maintenance","13Monitor","14Optimize"],
+          //children: getChildrenHtmlVue('.temp/pages/series/Digitalization/SyncData'),
+        },
+      ],
+    },
     navbar: [
       { text: "Home", link: "/" },
       { text: "Skills", link: "/categories/Skills/1.html" },
@@ -52,15 +61,14 @@ export default defineUserConfig({
       { text: "ETL", link: "/categories/ETL/1.html" },
       { text: "MES", link: "/categories/MES/1.html" },
       { text: "WMS", link: "/categories/WMS/1.html" },
-      { text: "Project", link: "/categories/Project/1.html" },
       { text: "Tags", link: "/tags/SQLServer/1.html" },
-      // {
-      //   text: "Docs",
-      //   children: [
-      //     { text: "vuepress-reco", link: "/docs/theme-reco/theme" },
-      //     { text: "vuepress-theme-reco", link: "/blogs/other/guide" },
-      //   ],
-      // },
+      {
+        text: "Series",
+        children: [
+          { text: "ApacheNifi", link: "/series/ETL/BasicProcessor/1Group" },
+          { text: "SyncData", link: "/series/Digitalization/SyncData/1Scope" },
+        ],
+      },
     ],
     bulletin: {
       title: 'Information',
