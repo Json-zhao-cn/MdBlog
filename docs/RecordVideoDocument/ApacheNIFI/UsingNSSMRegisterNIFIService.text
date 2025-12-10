@@ -1,0 +1,39 @@
+Good night, everyone. Welcome back to Json’s master Apache NIFI skill from 0 to 1 course.
+
+In the last lesson, we studied how to down the Apache NIFI 2.3 version. Today, we will study how to use NSSM to register NIFI service as windows service. 
+Only in this way, we don’t need to maintain Apache NIFI service manually.
+
+What is NSSM? It is a tool to help us to register some application services as windows service. 
+
+After installation, we can use windows services screen to maintain our application services.
+
+Today’s agenda is below:
+1.	Download the NSSM tool
+2.	Create the NIFI bat script
+3.	Register NIFI service as windows service
+
+Okay, let’s enter this first step. In the first, open the NSSM official website, download the NSSM latest version. 
+Then, extract this zip file,
+Next, add win64 or win32 path to your computer system environment. If your computer is 64, add win64 path; otherwise, add win32 path.
+Finally, run cmd command to check if your path is correct or not
+
+After NSSM installation, we need to create the run-nifi.bat script.
+First, create run-nifi.bat file.
+Second, copy the run-nifi.bat script to your file.
+Finaly, check this script can start the NIFI service or not.
+Because starting NIFI service needs more time, we need to wait
+
+Okay, it looks like the script is correct.
+We can step into the last step. Using NSSM to register NIFI service as windows service.
+
+First, use administrator to run cmd command,
+Second, install service,
+Third, config some files
+Then, config the service output log, it will help us to check service information easily.
+Next, config the service error log, it can help us quickly find error logs
+Finaly, open service screen to start Apache NIFI service.
+We need to wait due to starting Apache NIFI service needs more time.
+Okay, we can access the NIFI home.
+
+Congratulations, we install the NIFI services successfully.
+Okay, today’s course is end. In the next topic. We will study some common use processors. See you next time.
