@@ -11,6 +11,7 @@ categories:
 ### 1. **Download the Apache NIFI version 2.3.0**
 - Open [nifi official website](https://nifi.apache.org/), click `download`,you can download the latest version 2,current is `2.6.0`, and the latest version 1,`NIFI-1.28.1`;
 - If you want to download the archieve version,[NIFI archieve](https://archive.apache.org/dist/nifi/) to choose your version, I select the `2.3.0`;
+- [Video Link](https://www.youtube.com/watch?v=EPp8PXWViyo)
 
 ---
 ### 2. **Download the java-version**
