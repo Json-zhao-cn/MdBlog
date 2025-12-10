@@ -141,6 +141,6 @@ Generated Password [sfiElxVoB1DsfOSQTC2r4xVdqseo90lg]
 
 `copy and save the user`
 
-5. login,you will see the nifi home screen, you can start you nifi journey now.
+5.use this initial username and password to login,you will see the nifi home screen, you can start you nifi journey now.
 
 ![nifihome](./nifiHome.png)
