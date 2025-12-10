@@ -10,10 +10,10 @@ categories:
 ## **How to use `NSSM` tool to register Apache NIFI as windows service**
 
 ### 1.Download NSSM
-Open the [NSSM offcial Website](https://nssm.cc/download) to down `nssm-2.24-101-g897c7ad.zip` file;
-Then, extract the zip file to NSSM folder;
-Next, add the `nssm win64` or `win32` to system `environment path`
-Finaly, run `nssm -v` to check NSSM install success or not 
+- Open the [NSSM offcial Website](https://nssm.cc/download) to down `nssm-2.24-101-g897c7ad.zip` file;
+- Then, extract the zip file to NSSM folder;
+- Next, add the **`nssm win64`** or **`win32`** to system `environment path`;
+- Finaly, run `nssm -v` to check NSSM install success or not;
 
 ```ps
 nssm -v
