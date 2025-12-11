@@ -1,0 +1,107 @@
+Good night, everyone. Welcome back to Json’s master Apache NIFI skill from 0 to 1 course.
+In the last lesson, we studied how to use NSSM tool to register NIFI service as windows service. 
+Today, we will enter next top, introduce some frequently used processors. I will only introduce the processor we often use attribute,
+ something we need to notice. If you want to know more detailed information. Please read the official document or send email to me directly.
+Today’s agenda is below:
+1.	Introducing the group
+2.	How to add controller service in the ETL
+3.	How to use input and out port to connect two groups
+Before we step into the first step. I want to access the NIFI home anonymously. In this way, I don’t need to input user and password in every time I login.
+ 	Open the nifi.properties file, we set anonymous as true. Then, we start the NIFI service.
+Now, we can see the NIFI home screen. I will introduce group first.
+1.	Group is a business component. It is just like a business function. 
+2.	Each group has its unique id. Even if you have two groups of the same name, however, their UUID is different.
+3.	You can add multiple groups into your group. You also can add multiple child groups in your child group.
+4.	Group most important attribute, Log File Suffix. This attribute can help you record your log information to your customer file.The file name is attribute value name.
+
+Okay, the group simply introduce is done. We will run into next topic. The controller service.
+What is the controller service. Controller service is NIFI services cluster. You can easily add database connect, Json, xml and xml operation service in your ETL.
+I will show you how to add the SQL Server JDBC connection service.
+Because add SQL server JDBC connection service needs Microsoft SQL Server JDBC driver. We need to download this driver first.
+Open the Microsoft JDBC official website, click previous release, find your specific version. I use 12.6 version. I will download this version. 
+After the download is completed, extract this zip file to your folder.
+Then, copy SQL Server JDBC package to you NIFI lib folder.
+Okay, let’s start connecting the SQL Server.
+First, input your database address, and input database driver class name. Next, input your user and password, set the max connection as 50. 
+We can click validate to check connection is well or not.
+Okay, validating is success.
+We can step into last topic. Using input and out port to connect different groups.
+In the first group, you will add input and out port. In the second group, you need to add input port. If you don’t have any other logic to do. You don’t need to add out port.
+Okay, link the next group. It is well.
+
+Today’s topic is end. In the next topic, I will introduce another processor, see you.
+
+
+
+
+Conversational:
+
+Hey everyone, good night! Welcome back to Json’s masterclass on Apache NiFi—from zero to one.
+
+In the last lesson, we learned how to use the NSSM tool to register NiFi as a Windows service. 
+Today, we’re moving forward and diving into some of the most commonly used processors. 
+I’ll focus on the ones we use all the time and highlight a few things you should keep in mind. 
+If you want more details, feel free to check the official docs or just shoot me an email.
+
+Here’s what we’re covering today:
+1. Understanding process groups
+2. How to add a controller service in your ETL flow
+3. Using input and output ports to connect two groups
+
+Before we jump into it, let me quickly set up anonymous access to the NiFi UI. That way, I won’t have to log in every single time with a username and password.
+
+So, open up the nifi.properties file and set “anonymous” to true. Then restart the NiFi service.
+
+Now when we open the NiFi dashboard, we can access it right away. Let’s start by talking about process groups.
+
+1. A process group is basically a business component—it’s like a self-contained function.
+2. Every group has its own unique ID. Even if two groups have the same name, their UUIDs will always be different.
+3. You can nest groups inside each other—you can even put child groups inside other child groups.
+4. One key attribute to remember is “Log File Suffix.” This lets you write logs to a custom file named after the suffix you set.
+
+Alright, that’s a quick overview of groups. Now let’s move on to controller services.
+
+So, what exactly is a controller service? Think of it as a shared service pool for NiFi. 
+It lets you easily plug in things like database connections, JSON processors, XML parsers, and more into your data flows.
+
+Let me show you how to set up a SQL Server JDBC connection service.
+
+But first—since this requires the Microsoft SQL Server JDBC driver—we need to download it.
+
+Head over to the official Microsoft JDBC driver page, go to “Previous Releases,” and pick the version you need. I’m using version 12.6, so I’ll download that one.
+
+Once it’s downloaded, unzip the file to a folder on your computer.
+
+Then, copy the SQL Server JDBC JAR files into your NiFi lib directory.
+
+Okay, now let’s set up the connection.
+
+Go to the controller settings, enter your database URL, driver class name (that’s usually com.microsoft.sqlserver.jdbc.SQLServerDriver), then add your username and password.
+Set the maximum number of connections to something like 50.
+
+Now click “Validate” to test the connection.
+
+And… great! Validation succeeded.
+
+Now onto our final topic: using input and output ports to link different process groups.
+
+In the first group, you’ll add both an input port and an output port. In the second group, 
+you only need an input port—unless you plan to send data further down, you don’t need an output port there.
+
+Now, draw a connection from the first group’s output port to the second group’s input port.
+
+And there you go—it’s connected and working.
+
+That wraps up today’s session. Next time, I’ll introduce more useful processors. See you then!
+
+修改要点：
+1. 将原文中生硬的开场白“Good night, everyone. Welcome back…”优化为更自然、亲切的口语表达“Hey everyone, good night! Welcome back…”，增强对话感。
+2. 调整了部分句式结构，如将“In the last lesson, we studied how to…”改为更口语化的“In the last lesson, we learned how to…”，使语言更贴近日常教学场景。
+3. 将“Today, we will enter next top…”这类语法不通顺且不自然的表达，修正并重写为“Today, we’re moving forward and diving into…”，提升流畅度和准确性。
+4. 对技术术语的解释增加了类比说明，例如将“Controller service is NIFI services cluster”转化为更易懂的“Think of it as a shared service pool for NiFi”，帮助听众更好理解。
+5. 拆分长句、简化复杂表达，如把多个并列句子用连接词或段落分开，提高可读性和口语节奏感。
+6. 将“Please read the official document or send email to me directly”改为更自然的说法“feel free to check the official docs or just shoot me an email”，更符合英语母语者的交流习惯。
+7. 修正拼写错误和语法问题，如“run into next topic”改为“move on to the next topic”，“access the NIFI home anonymously”调整为“set up anonymous access to the NiFi UI”以准确表达意思。
+8. 增加过渡语和语气词（如“Alright”, “Now”, “And there you go”），使讲解更具连贯性和亲和力，适合视频课程或直播讲解场景。
+9. 统一大小写和技术名词格式，如“NIFI”统一为正确的“NiFi”，提升专业性。
+10. 最后一段结束语由生硬的“Today’s topic is end”改为自然收尾的“That wraps up today’s session”，并用“See you then!”营造轻松告别氛围。
