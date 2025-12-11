@@ -37,3 +37,69 @@ Okay, we can access the NIFI home.
 
 Congratulations, we install the NIFI services successfully.
 Okay, today’s course is end. In the next topic. We will study some frequently-used processors. See you.
+
+
+
+Conversational:
+Hey everyone, good night! Welcome back to Json’s masterclass on Apache NiFi—from zero to one.
+
+In the last lesson, we went over how to download Apache NiFi version 2.3. Today, we’re going to learn how to use NSSM to register NiFi as a Windows service. 
+Once it’s set up this way, we won’t have to manually start or manage the NiFi service every time—we can let Windows handle it automatically.
+
+So, what is NSSM? It’s a handy little tool that lets us turn any application into a Windows service. That means it can run in the background, 
+start with your system, and be managed just like any other service.
+
+After installing NSSM, we’ll be able to control our services right from the Windows Services window—super convenient.
+
+Here’s what we’re doing today:
+1. Download the NSSM tool
+2. Create a batch script to run NiFi
+3. Use NSSM to register NiFi as a Windows service
+
+Alright, let’s jump into step one.
+
+First, open the official NSSM website and download the latest version.  
+Once it’s downloaded, extract the zip file to a folder on your computer.  
+Now, depending on your system—64-bit or 32-bit—add either the win64 or win32 folder path to your system’s environment variables.  
+Finally, open Command Prompt and run `nssm --version` (or just type `nssm`) to make sure it’s recognized. If you get a response, you’re all set!
+
+With NSSM installed, next we need to create the `run-nifi.bat` script.
+
+Go to your NiFi installation’s `bin` folder and create a new file called `run-nifi.bat`.  
+Then, copy the standard startup commands into this file—basically the same ones you’d use to start NiFi manually.  
+Save it, then double-check that the script actually works by running it.  
+Keep in mind: starting NiFi takes some time, so give it a minute or two—it’s totally normal for it to look stuck at first.
+
+Looks good! The script starts NiFi properly.
+
+Now, onto the final step: registering NiFi as a Windows service using NSSM.
+
+First, open Command Prompt as an administrator.  
+Then, run the command `nssm install NIFI`—this launches a setup window.  
+In the “Path” field, point it to your `run-nifi.bat` file.  
+Next, go ahead and configure the log files. Set up the output log so you can easily track what the service is doing.  
+Also, configure the error log—that way, if something goes wrong, you can quickly find and fix the issue.  
+Click Install, and you’re done!
+
+Now, open the Windows Services manager, find the “NIFI” service, and click Start.  
+Again, give it a few minutes—NiFi needs time to boot up fully.
+
+Once it’s running, open your browser and go to the NiFi homepage.
+
+And there it is—welcome to your very own NiFi instance, now running as a proper Windows service!
+
+Congratulations—you’ve successfully installed and registered NiFi as a service. Great job!
+
+That’s it for today’s session. Next time, we’ll dive into some of the most commonly used processors in NiFi. See you then!
+
+修改要点：
+1. 将开场白“Good night, everyone…”优化为更自然亲切的“Hey everyone, good night! Welcome back…”，增强口语感和亲和力。
+2. 修正语法错误并提升表达流畅度，如将“we studied how to down the Apache NIFI 2.3 version”改为正确的“we went over how to download Apache NiFi version 2.3”。
+3. 将生硬句式“Only in this way, we don’t need to maintain…”改为更自然的解释性表达“Once it’s set up this way, we won’t have to manually start or manage…”，使逻辑更清晰、语言更口语化。
+4. 对“What is NSSM?”的回答进行了扩展和软化处理，加入类比说明（“a handy little tool”），帮助听众更好理解其用途。
+5. 拆分长段落和列表项，将操作步骤转化为更易跟随的讲解节奏，并加入过渡语如“Alright”, “Now”, “Once it’s running”等，模拟真实教学场景。
+6. 将“Finaly”、“Second”等机械式列举改为更自然的叙述方式，同时保留结构清晰性。
+7. 修正拼写错误（如“Finaly”→“Finally”）和术语格式（“NIFI”统一为“NiFi”），提升专业性和可读性。
+8. 增加实际命令示例（如`nssm install NIFI`）和验证方法（运行命令检查路径），增强实用性与真实感。
+9. 将“today’s course is end”这类中式英语改为地道表达“That’s it for today’s session”或“This wraps up today”。
+10. 结尾部分加入鼓励性语言（“Congratulations—you’ve successfully…”）和自然告别（“See you then!”），营造积极轻松的学习氛围，符合视频课程语境。
