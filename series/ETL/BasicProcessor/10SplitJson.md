@@ -1,6 +1,6 @@
 ---
 title: SplitJson
-date: 2025/11/27
+date: 2025/12/11
 tags:
  - ApacheNIFI
 categories:

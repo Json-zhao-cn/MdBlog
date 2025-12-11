@@ -1,6 +1,6 @@
 ---
 title: ExecuteSQLRecord
-date: 2025/12/4
+date: 2025/12/8
 tags:
  - ApacheNIFI
 categories:

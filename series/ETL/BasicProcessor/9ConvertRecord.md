@@ -1,6 +1,6 @@
 ---
 title: ConvertRecord
-date: 2025/12/4
+date: 2025/12/10
 tags:
  - ApacheNIFI
 categories:

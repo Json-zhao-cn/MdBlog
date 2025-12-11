@@ -1,6 +1,6 @@
 ---
 title: ExecuteSQL
-date: 2025/12/4
+date: 2025/12/6
 tags:
  - ApacheNIFI
 categories:

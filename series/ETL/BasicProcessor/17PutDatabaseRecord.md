@@ -1,6 +1,6 @@
 ---
 title: PutDatabaseRecord
-date: 2025/11/27
+date: 2025/12/18
 tags:
  - ApacheNIFI
 categories:

@@ -1,6 +1,6 @@
 ---
 title: Input and out port
-date: 2025/12/4
+date: 2025/12/3
 tags:
  - ApacheNIFI
 categories:

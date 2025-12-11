@@ -1,6 +1,6 @@
 ---
 title: InvokeHTTP
-date: 2025/12/4
+date: 2025/12/19
 tags:
  - ApacheNIFI
 categories:

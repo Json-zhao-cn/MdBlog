@@ -1,6 +1,6 @@
 ---
 title: Group
-date: 2025/12/2
+date: 2025/12/1
 tags:
  - ApacheNIFI
 categories:

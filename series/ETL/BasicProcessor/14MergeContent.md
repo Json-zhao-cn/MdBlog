@@ -1,6 +1,6 @@
 ---
 title: MergeContent
-date: 2025/12/4
+date: 2025/12/15
 tags:
  - ApacheNIFI
 categories:
