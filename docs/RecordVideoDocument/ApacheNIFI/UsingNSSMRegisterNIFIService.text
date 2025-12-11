@@ -14,11 +14,11 @@ Today’s agenda is below:
 
 Okay, let’s enter this first step. In the first, open the NSSM official website, download the NSSM latest version. 
 Then, extract this zip file,
-Next, add win64 or win32 path to your computer system environment. If your computer is 64, add win64 path; otherwise, add win32 path.
+Next, add win64 or win32 path to your computer system environment. If your computer system is 64, add win64 path; otherwise, add win32 path.
 Finally, run cmd command to check if your path is correct or not
 
 After NSSM installation, we need to create the run-nifi.bat script.
-First, create run-nifi.bat file.
+First, create run-nifi.bat file in yout bin folder.
 Second, copy the run-nifi.bat script to your file.
 Finaly, check this script can start the NIFI service or not.
 Because starting NIFI service needs more time, we need to wait
@@ -36,4 +36,4 @@ We need to wait due to starting Apache NIFI service needs more time.
 Okay, we can access the NIFI home.
 
 Congratulations, we install the NIFI services successfully.
-Okay, today’s course is end. In the next topic. We will study some frequently-used processors. See you next time.
+Okay, today’s course is end. In the next topic. We will study some frequently-used processors. See you.
