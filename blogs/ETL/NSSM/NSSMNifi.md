@@ -9,6 +9,8 @@ categories:
 
 ## **How to use `NSSM` tool to register Apache NIFI as windows service**
 
+[Youtube Video Link](https://www.youtube.com/watch?v=FYR_PDuuafg)
+
 ### 1.Download NSSM
 - Open the [NSSM offcial Website](https://nssm.cc/download) to down `nssm-2.24-101-g897c7ad.zip` file;
 - Then, extract the zip file to NSSM folder;
@@ -18,6 +20,7 @@ categories:
 ```ps
 nssm -v
 ```
+![NIFIVersion](../../../docs/ApacheNIFI/NSSM/nssmVersion.png)
 
 ---
 ### 2. Create `run-nifi.bat` file
@@ -48,15 +51,24 @@ if errorlevel 1 (
 )
 
 ```
+---
 ### 3.Using nssm to register is as windows service
 1. Install ApacheNifiService
-2. Set output log
-3. Set error log
-4. Start service
+   ![NssmApp](../../../docs/ApacheNIFI/NSSM/NssmApp.png)
 
+2. Set Service detail
+   ![NssmAppDetail](../../../docs/ApacheNIFI/NSSM/NssmAppDetail.png)
+
+3. Set Service output and error log
+   ![NssmAppIO](../../../docs/ApacheNIFI/NSSM/NssmIO.png)
+
+4. Start service
+   ![NifiService](../../../docs/ApacheNIFI/NSSM/NifiService.png)
 
 ---
+
 ### 4.View your service
 ```ps
-nssm dump YourService
+nssm dump ApacheNifiService
 ```
+![NIFIVersion](../../../docs/ApacheNIFI/NSSM/ServiceInfo.png)
