@@ -28,7 +28,10 @@ You also can add multiple business logic in your group.^`Not recommand`
    Generate a new log file, the file name is your `Log File Suffix` name.
 
 ::: tip
-   If there are so many groups in your ETL. In your `nifi-app.log` file, there are large mess message in your file. You can't address your wanted log information.According to this scenario.You need to separte the log file. So,you need add the name in the `Log File Suffix`.
+   1. If there are so many groups in your ETL. In your `nifi-app.log` file, there are large mess message in your file. You can't address your wanted log information.According to this scenario.You need to separte the log file. So,you need add the name in the `Log File Suffix`.
+
+   2. Multiple group can share the same log file as  you set `Log File Suffix` value
+   
 :::
 
    ![GroupLogName](../../../docs/ApacheNIFI/Group/GroupLogName.png) 
