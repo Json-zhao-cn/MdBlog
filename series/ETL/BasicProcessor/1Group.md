@@ -14,7 +14,9 @@ categories:
 
 You can add so many processors in your group. You can use line to connect each processor to realize your business logic.
 
+::: warning
 You also can add multiple business logic in your group.^`Not recommand`
+:::
 
 ---
 ### 2. Group attributes
@@ -24,8 +26,10 @@ You also can add multiple business logic in your group.^`Not recommand`
    ![SameGroupName](../../../docs/ApacheNIFI/Group/SameGroup.png)
 3. `Log File Suffix`
    Generate a new log file, the file name is your `Log File Suffix` name.
-   
+
+::: tip
    If there are so many groups in your ETL. In your `nifi-app.log` file, there are large mess message in your file. You can't address your wanted log information.According to this scenario.You need to separte the log file. So,you need add the name in the `Log File Suffix`.
+:::
 
    ![GroupLogName](../../../docs/ApacheNIFI/Group/GroupLogName.png) 
 4. Default Back Pressure Object Threshold
