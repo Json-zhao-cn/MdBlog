@@ -12,3 +12,6 @@ categories:
    </br>
 2. **However, in the version 2.x, it has been cancelled**
     </br>
+
+3. **Using ConvertRecord processor to do it**
+    </br>
