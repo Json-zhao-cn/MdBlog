@@ -15,4 +15,4 @@ categories:
    </br>
 2. **We also can use NIFI original and customer attributes in our log**
     </br>
-3. **Compare to `LogAttribute`, `LogMessage` is better for record log**
+3. **Compare to `LogAttribute`, `LogMessage` is better for customerize record log**
