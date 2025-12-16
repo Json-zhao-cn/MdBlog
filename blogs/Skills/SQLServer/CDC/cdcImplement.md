@@ -10,7 +10,7 @@ categories:
 **enable SQL Server Change Data Capture (CDC)** 
 ---
 
-### 1. Enable CDC at the database level
+### 1. **Enable CDC at the database level**
 
 Run this once for the database:
 
@@ -22,7 +22,7 @@ EXEC sys.sp_cdc_enable_db;
 
 ---
 
-### 2. Enable CDC on each table
+### 2. **Enable CDC on each table**
 
 For each table (A, B, C…), run:
 
@@ -48,7 +48,7 @@ GO
 
 ---
 
-### 3. Configure retention period (3 days)
+### 3. **Configure retention period (3 days)**
 
 By default, CDC keeps change data for **3 days (72 hours)**, but you can explicitly set it:
 
@@ -65,7 +65,7 @@ This ensures the CDC cleanup job removes changes older than 3 days.
 
 ---
 
-### 4. Verify settings
+### 4. **Verify settings**
 
 Check retention and job info:
 
@@ -81,7 +81,7 @@ SELECT * FROM sys.tables WHERE is_tracked_by_cdc = 1;
 
 ---
 
-### 5. (Optional) Disable CDC on a table or DB
+### 5. **(Optional) Disable CDC on a table or DB**
 
 If later you want to remove CDC:
 
@@ -99,7 +99,10 @@ EXEC sys.sp_cdc_disable_db;
 
 ---
 
-Summary:
+### 6. **How to implement CDC service in the SQL Server always on?**
+***Because the CDC configuration in the `msdb`. We never add `msdb` in the SQL server always on(AG). `So, we need enbale cdc service in the all availability groups`***
+
+## **Summary:**
 
 * Enable CDC at **DB level** (`sp_cdc_enable_db`)
 * Enable CDC for each table (`sp_cdc_enable_table`)

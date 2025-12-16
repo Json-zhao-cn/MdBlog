@@ -38,10 +38,8 @@ BEGIN
         DECLARE @Message NVARCHAR(500);
         SET @Message = N'x  Current server is not PRIMARY server,stop job';
         
-        RAISERROR(@Message, 16, 1);
-        RETURN 1; 
+        THROW 50001,@Message,1;
     END
-    
     PRINT N'✓ Current server is PRIMARY server，continue job';
     RETURN 0; 
 END
@@ -61,11 +59,17 @@ GRANT VIEW SERVER PERFORMANCE STATE TO [YourUser];
 - If the server is primary server, go to next step;otherwise,exit.
 
 ---
+
+#### 3. **Deal with CDC job**
+1. You must enable CDC job in the secondary database. Because the CDC configuration data saved in the `msdb` database. We add your db in the failover, we never add `msdb`.
+2. In the CDC Jobs `cdc.ReportCenter_capture` and `cdc.ReportCenter_cleanup`， you also need add the first step to check current db is primary db or not;
+
+
 ### 3.**Summarize**
 1. Limitation
-   - It can't sovle the `CDC` job sync problem, the `MSDB` will loss some cdc element table;
    - Each job need add this step,it doesn't has central control;
    - Each job in the AG will generate some unuse messsage;
+   - **`CDC job`** need special configuration.
   
 2. Benefit
    - Simple configurate. Less job is best way;

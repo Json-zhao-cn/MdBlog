@@ -10,6 +10,8 @@ categories:
 
 # Using `AG Trigger` to `Sync Job status` in the `SQL Server Alwayson` cluster
 
+**This solution was dispose due to the AG trigger is hard to realize in the SQL Server alwayson. Recommand use add step to check current listener is primary or not.[The realize solution](./SyncJobAG.md)**
+
 # Process
 ```Text
     +------------------------------------+
