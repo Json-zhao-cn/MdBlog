@@ -17,6 +17,6 @@ categories:
 3. **You can add the `context parameters` to customerize you SQL**
 
 ---
-### 2. **Attribute**
+### 2. **Properties**
 
 1. **executesql.row.count**: It indicated how many rows of the SQL Query result. You can use this attribute to judge does your SQL Query has return data or not.

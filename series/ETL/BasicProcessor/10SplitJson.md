@@ -10,11 +10,11 @@ categories:
 ---
 
 ### **What is `SplitJson`?**
-The `SplitJson` is a key processor in the Apache NIFI application.
-When we use `SplitJson` processor, we would better to set the queue is `FirstInFirstOut`
+1. The `SplitJson` is a key processor in the Apache NIFI application.
+2. When we use `SplitJson` processor, we would better to set the queue is `FirstInFirstOut`
 
 ---
-### 1. **`SplitJson` Attribute**
+### 1. **`SplitJson` Properties**
 
 | Property                                | Value / Explanation                         |
 | --------------------------------------- | ------------------------------------------- |

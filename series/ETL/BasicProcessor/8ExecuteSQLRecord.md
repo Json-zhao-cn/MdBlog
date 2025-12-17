@@ -16,7 +16,7 @@ categories:
 3. This processor is replcase `ConvertAvroToJSON` processor
 
 ---
-### 2. **Attribute**
+### 2. **Properties**
 1. **record.count**: we can use this attribute to judge we get data or not.
 
 2. **executesql.row.count**: we also can use this attribute to judge we get data or not.

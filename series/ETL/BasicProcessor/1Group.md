@@ -19,7 +19,7 @@ You also can add multiple business logic in your group.^`Not recommand`
 :::
 
 ---
-### 2. Group attributes
+### 2. **Group Properties**
 1. Each Group has unique uuid.
   <br>  
 2. You can have the same name group^`Not recommand`
