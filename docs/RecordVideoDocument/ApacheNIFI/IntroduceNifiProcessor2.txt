@@ -1,0 +1,29 @@
+Hey everyone, good night! Welcome back to Json’s class on mastering Apache NIFI—from zero to one.
+
+In the last lesson, we went over some commonly used NIFI processors. We covered processor groups, 
+how to add a database connection service in the ETL flow, and how to use input and output ports to link two groups together. 
+Today, we are going to keep exploring more useful processors. If you want more details, feel free to check out the official docs or just shoot me an email.
+
+Here is what we are covering today:
+1. A quick intro to the UpdateAttribute processor
+2. How to use LogAttribute and LogMessage to record custom logs in NIFI
+
+Alright, let’s get started!
+
+First up: UpdateAttribute. This processor lets you add, modify, or remove attributes in your data flow. Super handy when you need to tweak metadata on the fly.
+
+You can also use the Delete Attributes Expression to clean up any attributes you do not need—just set up a rule and it will automatically remove them.
+
+I will walk you through how to add, update, and delete attributes step by step.
+
+That is a quick look at UpdateAttribute. Now let’s move on to logging—specifically, LogAttribute and LogMessage.
+
+LogAttribute does exactly what it sounds like: it logs the current attributes of a flow file. On the other hand, LogMessage lets you write fully customized log messages. These are two of the most frequently used processors when debugging or monitoring your ETL flows.
+
+Let me show you how to set both of them up to capture the logs you care about.
+
+Cool, so now you know how to use log processors to track whatever info you need. But between LogAttribute and LogMessage? I would definitely recommend LogMessage. It gives you way more flexibility and makes your logs much clearer and easier to read.
+
+And that is it for today! Next time, I’ll introduce a few more handy processors. See you then!
+
+
