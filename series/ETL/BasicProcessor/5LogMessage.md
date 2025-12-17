@@ -1,5 +1,5 @@
 ---
-title: LogMessage
+title: 5.LogMessage
 date: 2025/12/5
 tags:
  - ApacheNIFI
@@ -7,7 +7,7 @@ categories:
  - ETL
 ---
 
-## **LogMessage**
+## **5.LogMessage**
 
 ---
 ### 1. **What is LogMessage?**

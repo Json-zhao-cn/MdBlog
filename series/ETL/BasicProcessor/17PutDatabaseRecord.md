@@ -1,5 +1,5 @@
 ---
-title: PutDatabaseRecord
+title: 17.PutDatabaseRecord
 date: 2025/12/18
 tags:
  - ApacheNIFI
@@ -7,14 +7,17 @@ categories:
  - ETL
 ---
 
-## **Apache NIFI `PutDatabaseRecord` processor**
+## **17.PutDatabaseRecord**
+---
+
+### 1.**What is `PutDatabaseRecord`?**
 The `PutDatabaseRecord` is a most important  key processor in the Apache NIFI application.
 
 We can use `PutDatabaseRecord` to **batch** `insert`,`update`,`delete` data.
 
 ---
 
-#### 1. **`PutDatabaseRecord` Attribute**
+### 2. **`PutDatabaseRecord` Attribute**
 | Property                                | Value / Explanation                                                    |
 | --------------------------------------- | ---------------------------------------------------------------------- |
 | **Record Reader**                       | `JsonTreeReader` (or use `AvroReader` if you converted format earlier) |

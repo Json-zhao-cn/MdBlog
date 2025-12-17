@@ -1,10 +1,13 @@
 ---
-title: ExecuteSQLRecord
+title: 8.ExecuteSQLRecord
 date: 2025/12/8
 tags:
  - ApacheNIFI
 categories:
  - ETL
+---
+
+## **8.ExecuteSQLRecord**
 ---
 
 ### 1. **What is ExecuteSQLRecord?**

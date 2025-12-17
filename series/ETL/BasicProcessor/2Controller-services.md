@@ -1,5 +1,5 @@
 ---
-title: Controller-services
+title: 2.Controller-services
 date: 2025/12/2
 tags:
  - ApacheNIFI
@@ -7,7 +7,9 @@ categories:
  - ETL
 ---
 
-## **Controller-services**
+## **2.Controller-services**
+---
+
 ### 1. **What is Controller-services?**
 Controller-services is nifi services cluster. You can easy add DB connect, Json reader and writer, kafka and cache services in your ETL.
 

@@ -1,10 +1,12 @@
 ---
-title: ConvertAvroToJSON
+title: 7.ConvertAvroToJSON
 date: 2025/12/7
 tags:
  - ApacheNIFI
 categories:
  - ETL
+---
+## **7.ConvertAvroToJSON**
 ---
 
 ### 1. **What is ConvertAvroToJSON?**

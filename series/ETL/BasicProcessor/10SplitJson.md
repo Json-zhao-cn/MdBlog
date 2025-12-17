@@ -1,13 +1,15 @@
 ---
-title: SplitJson
+title: 10.SplitJson
 date: 2025/12/11
 tags:
  - ApacheNIFI
 categories:
  - ETL
 ---
+## **10.SplitJson**
+---
 
-## **Apache NIFI `SplitJson` processor**
+### **What is `SplitJson`?**
 The `SplitJson` is a key processor in the Apache NIFI application.
 When we use `SplitJson` processor, we would better to set the queue is `FirstInFirstOut`
 

@@ -1,5 +1,5 @@
 ---
-title: Input and out port
+title: 3.Input and out port
 date: 2025/12/3
 tags:
  - ApacheNIFI
@@ -7,10 +7,10 @@ categories:
  - ETL
 ---
 
-## **Input and out port**
+## **3.Input and out port**
 
 ---
-### **What is input and out port?**
+### 1.**What is input and out port?**
 1. Input port is you recieve the parameters and results from last group;
 <br>
 2. Out port is you output the parameters and results your current group for next group use;

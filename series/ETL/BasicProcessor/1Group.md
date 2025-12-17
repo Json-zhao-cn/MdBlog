@@ -1,5 +1,5 @@
 ---
-title: Group
+title: 1.Group
 date: 2025/12/1
 tags:
  - ApacheNIFI
@@ -7,8 +7,8 @@ categories:
  - ETL
 ---
 
-## **Group**
-
+## **1.Group**
+---
 ### 1. **What is nifi group?**
 `NIFI Group` is a `business and function component cluster`. In this group, you can have `multiple childer groups`.
 
