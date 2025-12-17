@@ -53,3 +53,5 @@ In the `ConvertRecord Properties`, the set is as flows:
 In the `ConvertRecord Properties`, the set is as flows:
 **Record Reader**:JsonTreeReader
 **Record Writer**:JsonRecordSetWriter
+
+However, you don't need to use `ConvertRecord` processor to convert `ExecuteSQLRecord` result as Json formate. Because we can set the `ExecuteSQLRecord` result as Json formate.
