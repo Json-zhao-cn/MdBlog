@@ -8,8 +8,9 @@ categories:
 ---
 
 ## **3.Input and out port**
-
+- [Video Link](https://youtu.be/UV8oaJngS1k)
 ---
+
 ### 1.**What is input and out port?**
 1. Input port is you recieve the parameters and results from last group;
 <br>

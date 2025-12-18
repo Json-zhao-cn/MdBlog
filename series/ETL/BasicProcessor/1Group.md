@@ -8,7 +8,9 @@ categories:
 ---
 
 ## **1.Group**
+- [Video Link](https://youtu.be/UV8oaJngS1k)
 ---
+
 ### 1. **What is nifi group?**
 `NIFI Group` is a `business and function component cluster`. In this group, you can have `multiple childer groups`.
 

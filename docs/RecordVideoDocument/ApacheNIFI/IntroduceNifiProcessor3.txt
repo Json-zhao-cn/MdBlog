@@ -1,0 +1,31 @@
+Hey everyone, good night! Welcome back to Json’s class on mastering Apache NIFI—from zero to one.
+
+In the last lesson, we went over some frequently used NIFI processors. 
+We covered processor UpdateAttribute and how to use LogAttribute and LogMessage to record your customized log.
+Today, we are going to keep exploring more useful processors. 
+If you want more details, feel free to check out the official docs or just shoot me an email.
+
+Here is what we are covering today:
+1.	Using ExecuteSQL processor to query database data.
+2.	Using ExecuteSQLRecord processor to query database data.
+3.	Using ConvertRecord processor to convert ExecuteSQL results in what format data we want.
+
+Alright, let’s get started!
+
+First up: ExecuteSQL. This processor is SQL Query processor. You can use it to get the Database data. The result format is avro format.
+
+Let us move on to the ExecuteSQLRecord. It is also the SQL Query processor. The result format is Json format.
+
+
+That is a quick overview of ExecuteSQL and ExecuteSQLRecord. However, we cannot use the ExecuteSQL result directly due to the avro format data. 
+So, we need to use ConvertRecord processor to convert the avro data to the Json format data.
+Because the ExecuteSQLRecord result is Json format data, we don’t need to convert it again.
+We need to add the controller service to the ConvertRecord. And enable it.
+
+Cool, so now you know how to use ExecuteSQL and ExecuteSQLRecord to query database data whatever DB data you need. 
+But between ExecuteSQL and ExecuteSQLRecord? I would definitely recommend ExecuteSQLRecord. Because the ExecuteSQLRecord result is Json format data.
+You don’t need to convert it to Json again. 
+
+And that is it for today! Next time, I will show you how to Split the Json data and evaluate the Json path. See you then!
+
+
