@@ -39,7 +39,7 @@ export default defineUserConfig({
         {
           text: "BasicKnowledge",
           children: ["1Group", "2Controller-services","3InputAndOutPort","4UpdateAttribute","5LogMessage","6ExecuteSQL","7ConvertAvroToJSON","8ExecuteSQLRecord",
-            "9ConvertRecord","10SplitJson","11EvaluateJsonPath","12RouteOnAttribute","13RouteOnContent","14MergeContent","15ReplaceText","16PutSQL"
+            "9ConvertRecord","10SplitJson","11EvaluateJsonPath","12RouteOnAttribute","13QueryRecord","14MergeContent","15ReplaceText","16PutSQL"
             ,"17PutDatabaseRecord","18InvokeHTTP"
           ]
           //children: getChildrenHtmlVue('.temp/pages/series/ETL/BasicProcessor'),
