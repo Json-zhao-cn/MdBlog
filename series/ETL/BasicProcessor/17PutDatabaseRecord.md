@@ -28,3 +28,8 @@ We can use `PutDatabaseRecord` to **batch** `insert`,`update`,`delete` data.
 | **Statement Type**                      | `INSERT` — inserts records into the table                              |
 | **Field-to-SQL Type Mapping**           | *(optional)* — only if NiFi has trouble detecting data types           |
 | **Update Key Column**                   | *(leave blank — not needed for INSERT)*                                |
+
+---
+### 3. ***Use case***
+1. `ConvertRecord` + `PutDatabaseRecord` batch insert, uodate and delete data
+2. `QueryRecord` + `PutDatabaseRecord` batch insert, uodate and delete data
