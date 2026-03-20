@@ -35,6 +35,15 @@ export default defineUserConfig({
     lastUpdatedText: "",
     // series as sidebar
     series: {
+      "/series/Digitalization/MESConsultant/": [
+        {
+          text: "MESConsultantGuide",
+          children: ["1Scope", "2ConsultantRequirement","3UnderstandFactory","4UnderstandFactoryProduct","5UnderstandProduceFlow","6UnderstandEquipment","7BusinessCollaboration","8SystemIntegration",
+            "9FactoryOverview","10MESOverview","11MESTableOverview","12SystemHealthy",
+          ]
+          //children: getChildrenHtmlVue('.temp/pages/series/ETL/BasicProcessor'),
+        },
+      ],
       "/series/ETL/BasicProcessor/": [
         {
           text: "BasicKnowledge",
@@ -65,6 +74,7 @@ export default defineUserConfig({
       {
         text: "Series",
         children: [
+          { text: "MESConsultant", link: "/series/Digitalization/MESConsultant/1Scope" },
           { text: "ApacheNifi", link: "/series/ETL/BasicProcessor/1Group" },
           { text: "SyncData", link: "/series/Digitalization/SyncData/1Scope" },
         ],
